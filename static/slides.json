@@ -1,0 +1,41 @@
+			let slides = [
+				{
+					img: 'one.png',
+					text: 'Change Starts Here. Introducing Haiti Takes Root.',
+					id: 'home',
+					copy: 'LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIAM NONUMMY NIBH EUISMOD TINCIDUNT UT LAOREET DOLORE MAGNA ALIQUAM ERAT VOLUTPAT. UT WISI ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCI TATION LOBORTIS NISLUT.',
+					name: "Home",
+
+				},
+				{
+					img: 'two.png',
+					text: 'The Battle Against Deforestation Takes a Village.',
+					id: 'mission',
+					copy: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.',
+					name: 'Our Mission',
+					butt: 'Explore',
+					subs: [
+						{
+							img: 'three.png',
+							text: 'Together We Can',
+							id: 'about',
+							copy: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.'
+						},
+						{
+							img: 'four.png',
+							text: 'Change Starts Here.',
+							id: 'approach',
+							copy: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.',
+							name: 'Our Approach'
+						}
+					]
+				},
+				{
+					img: 'coalition.png',
+					text: 'Positive Change Starts with Helping Hands.',
+					copy: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.',
+					name: 'Our Coalition',
+					id: 'coalition'
+
+				}
+			]

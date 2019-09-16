@@ -1,0 +1,334 @@
+
+#activities {
+	align-items: flex-start;
+	h1 {
+		text-align: left;
+		max-width: 60%;
+	}
+	p {
+		text-align: left;
+		max-width: 60%;
+	}
+	@media(max-width:770px) {
+		h1 {
+			font-size: 22px;
+			max-width: 100%;
+		}
+		p {
+			max-width: 100%;
+		}
+	}
+	.opener.curs {
+		display: none;
+		font-size: 30px;
+		img {
+			width: 30px;
+		}
+	}
+}
+#activities_about {
+	flex-direction: row;
+	h4 {
+		color: #ece5c9;
+		max-width: 100%;
+	}
+	h1 {
+		color: #ece5c9;
+		margin-bottom: 0;
+		font-size: 40px;
+		max-width: 100%;
+	}
+	p {	
+		padding: 0 20px;
+		max-width: 100%;
+	}
+	.copy {
+		color: #ece5c9;
+		max-width: 60%;
+		margin-top: 20px;
+	}
+
+	#greenhand {
+		width: 140px;
+		margin: 20px 0;
+		display: inline-block;
+	}
+	.wrap {
+		display: flex;
+		width: 80%;
+	}
+	@media(max-width:770px) {
+		flex-direction: column;
+		align-items: flex-start;
+		display: none;S
+		.copy {
+			max-width: none;
+		}
+		.opener {
+			bottom: 160px;
+		}
+		#greenhand {
+			margin: 10px 0;
+			width: 65px;
+		}
+		h1 {
+			font-size: 20px;
+			max-width: none;
+		}
+		p {
+			padding: 0;
+		}
+		h4 {
+			margin-top: -10%;
+			font-size: 18px;
+		}
+		.wrap {
+			/*display: flex;*/
+			margin-bottom: 10px;
+			width: 100%;
+			/*height: 80px;*/
+			flex-wrap: wrap;
+			/*margin-top: -30px;*/
+		}
+		p {
+			/*line-height: 1.3*/
+		}
+		.opener {
+			width: 100%;
+			bottom: 40px;
+		}
+	}
+}
+
+#res1 {
+	background-image: url(../static/res1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 120px;
+    position: absolute;
+    left: 35%;
+    top: -4%;
+	transform: rotate(-10deg);
+	@media(max-width:770px) {
+		top: 20%;
+		left: -22%;
+	}
+}
+#res2 {
+	background-image: url(../static/res2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: -4%;
+    top: 35%;
+	transform: rotate(-24deg);
+	@media(max-width:770px) {
+		top: 9%;
+		left: -23%;
+		width: 130px;
+		height: 130px;
+	}
+}
+#res3 {
+	background-image: url(../static/res3.jpg);
+	background-size: cover;
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    left: -2%;
+    top: 15%;
+	transform: rotate(11deg);
+	@media(max-width:770px) {
+		top: -2%;
+		left: -28%;	
+	}
+}
+#res4 {
+	background-image: url(../static/res4.jpg);
+	background-size: cover;
+	height: 150px;
+    width: 200px;
+    position: absolute;
+    left: 8%;
+    top: 1%;
+	transform: rotate(-10deg);
+	filter: grayscale(1);
+	@media(max-width:770px) {
+		top: 2%;
+		left: auto;
+		right: -35%;
+		transform: rotate(15deg);
+	}
+}
+#res5 {
+	background-image: url(../static/res5.jpg);
+	background-size: cover;
+    height: 120px;
+    width: 220px;
+    position: absolute;
+    top: -2%;
+    left: 17%;
+	transform: rotate(14deg);
+	@media(max-width:770px) {
+	    top: -5%;
+	    left: 18%;
+		transform: rotate(2deg);
+	}
+}
+#res6 {
+	background-image: url(../static/res6.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 250px;
+    width: 160px;
+	position: absolute;
+	bottom: 5%;
+	left: -1%;
+	transform: rotate(-10deg);
+	@media(max-width:770px) {
+    	left: -18%;
+    	bottom: -13%;
+		transform: rotate(-25deg);
+	}
+}
+#res7 {
+	background-image: url(../static/res7.jpg);
+	background-size: cover;
+	height: 140px;
+    width: 240px;
+    position: absolute;
+    top: -7%;
+    left: 43%;
+	transform: rotate(9deg);
+	@media(max-width:770px) {
+		top: auto;
+		left: auto;
+		bottom: -13%;
+		right: -28%;	
+	}
+}
+#activities_proj1 {
+	align-items: center;
+	background-color: black;
+	h4 {
+		text-align: center;
+	}
+	/* what is this for? perhaps multiple projects?*/
+	/*.projmode {*/
+		h1 {
+			text-align: center;
+			/*width: 70%;*/
+			max-width: 100%;
+			margin-bottom: 5px;
+			margin-top: 0px;
+			z-index: 10;
+		}
+		p {
+			text-align: center;
+			/*width: 70%;*/
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	/*}*/
+	.wrap {
+		z-index: 1;
+		width: 80%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.openproj {
+		z-index: 2;
+	}
+	@media(max-width:770px) {		
+		overflow: hidden;
+		.wrap {
+			width: 100%;
+		}
+		h1 {
+			font-size: 24px;
+			/*margin-top: 50px;*/
+			margin-bottom: 10px; 
+		}
+		p {
+			line-height: 1.3;
+			/*margin: 0;*/
+			width: 100%;
+			max-width: none;
+			&:last-child {
+				margin-bottom:80px;
+			}
+		}
+		.paper {
+			/*width: 140px;*/
+		}
+	}
+}
+
+#activities_proj1_slide {
+	h1, h4, p {
+		text-align: left;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+
+#actphotos {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+}
+
+
+.projmode {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 30;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    .slick-slide {
+    	display: flex;
+    	justify-content: center;
+    }
+}
+.allproj {
+	/*position: absolute;*/
+	/*top: 8%;*/
+	/*left: 15%;*/
+	z-index: 55;
+	margin: -5% 0 5% -90%;
+	@media(max-width: 770px) {
+		margin: 10% 0 5% 0%;
+	}
+}
+.projslide {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	background-size: cover;
+	padding: 0 220px;
+	@media(max-width: 770px) {
+		padding: 0 5vh;
+	}
+}
+#proj1 {
+	.projslide {
+		background-color: black;
+	}
+}

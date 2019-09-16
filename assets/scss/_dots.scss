@@ -1,0 +1,416 @@
+
+nav{
+	/*position: fixed;*/
+	position: absolute;
+	right: 20px;
+	/*top: 50%;*/
+	top: 15%;
+	bottom: 15%;
+	/*transform: translateY(-50%);*/
+	z-index: 40;
+	/*margin-top: 5.5vh;*/
+}
+
+/*dots and subdots*/
+
+@keyframes pulse {
+  0% {
+	  background: transparent;
+  }
+  50% {
+	  background: #ECE5C9;
+  }
+  100% {
+	  background: transparent;
+  }
+}
+@keyframes subpulse {
+	0% {
+		background: transparent;
+	}
+	50% {
+		background: #ece5c9;
+	}
+	100% {
+		background: transparent;
+	}
+
+}
+.subdots {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	opacity: 0;
+	pointer-events: none;
+	right: 0;
+	top: 0;
+	justify-content: center;
+	padding: 0;
+	transition: all 0.2s ease;
+	height: 0;
+	li {
+		position: relative;
+		color: #ECE5C9;
+		font-family: "flamaSemi";
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		cursor: pointer;
+		margin: 0;
+		height: 100%;
+		width: 100%;
+		flex: 1 1 auto;
+		margin-bottom: 0;
+		&:hover {
+			.subdot {
+					animation: subpulse 1s infinite;
+			}
+		}
+	}
+}
+.subdot {
+	width: 9px;
+	/*min-width: 9px;*/
+	height: 9px;
+	/*min-height: 9px;*/
+	margin-left: 5px;
+	cursor: pointer;
+	border: 1px solid #ECE5C9;
+	border-radius: 50px;
+	transform:translateX(4px);
+	/*margin: 0;*/
+}
+/*.subdots li {
+	background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
+}*/
+
+#dots {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	height: 100%;
+	/*height: 77vh;*/
+	/*height: 66vh;*/
+	/*justify-content: space-between;*/
+	/*padding-right: 65px;*/
+	.wrap {
+		display: flex;
+		height: 100%;
+	}
+	.slidename {
+		top: calc(-50% + 7px);
+	    position: relative;
+	    left: 0;
+	}
+	.dot {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background: transparent;
+		border: 1px solid #ECE5C9;
+		transition: all 0.3s ease;
+		margin-left: 20px;
+		position: relative;
+		overflow: visible;
+		flex-shrink: 0;
+		left: -3px;
+		top: calc(-50% + 7px);
+	}
+	& > li {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		position: relative;
+		flex-shrink: 0;
+		/*min-height: 75px;*/
+		/*width: 100px;*/
+		height: 100%;
+		flex: 1 1 auto;	
+		a {
+			color: #ECE5C9;
+			font-family: "flamaSemi";
+			text-transform: uppercase;
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+		}
+		&:before {
+		 content: '';
+		 position: absolute;
+		 top: 15px;
+		 bottom: 0;
+		 /*transform: translateY(50%);*/
+		 display:block;
+		 width: 1px;
+		 margin-top:0;
+		 background: #ECE5C9;
+		 right: 10px;
+		}
+		&:last-child {
+		    min-height: 0;
+		    height: auto;
+		    flex: 0 0 auto;
+		    /*margin-top: calc(50% - 13px);*/
+			.dot:after {
+				display: none;
+			}
+			&:before {
+				display: none;
+				content: none;
+			}
+		}
+		/* this very specific fix is to correctly position the last button + lines
+		since the wrapper for the last element has no height*/
+		/* this also applies to the 3rd to last one now? idk */
+		&:nth-last-child(2),&:nth-last-child(3) {
+			&.active {
+				.subdots {
+					li {
+						padding: 25% 0 0;
+						&:before {
+							bottom: calc(50% - 4px);
+						}
+						&:after {
+							top: calc(50% + 14px);
+							bottom: -4px;
+							/*content: none;*/
+						}
+						&+li {
+							padding: 25% 0 25%; 
+							&:before {
+								bottom: calc(50% + 4px);
+								top: 7%;
+							}
+							&:after {
+								top: calc(50% + 4px);
+								bottom: 0;
+								/*content: '';*/
+							}
+						}
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+		&:not(.active) {
+			&:hover {
+				.dot {
+  					animation: pulse 1s infinite;
+				}
+			}	
+		}
+		&.active {
+			transition: all 0.3s ease;
+			background: none;
+			.dot {
+				background: #ECE5C9;
+				width: 21px;
+				height: 21px;
+				left: 0;
+				/*transform: translate(3px,-3px);*/
+			}
+			&.subnav {
+				/*margin-bottom: calc(-25% - 4px);*/
+				/*margin-bottom:calc(-50% + 14px);*/
+				.wrap {
+					height: auto;
+				}
+				&:before {
+					content:none;
+				}	
+			}
+			.wrap {
+			}
+			.subdots {
+				padding-right: 10px;
+				/*height: 100%;*/
+				flex: 1 1 auto;
+				opacity: 1;
+				pointer-events: auto;
+				display: flex;
+				height: 100%;
+				align-items: stretch;
+				overflow-y: hidden;
+				overflow-x: visible;
+				margin-top: -4px;
+				li {
+					padding: 50% 0 0;
+					min-height: 50%;
+					&:before,&:after {
+					    content: "";
+					    position: absolute;
+					    display: block;
+					    background: #ece5c9;
+					    width: 1px;
+					    left: auto;
+					    margin: 0;
+					}
+					&:before {
+						top: 0;
+						bottom: calc(50% - 5px);
+						/*margin-bottom: .5rem; */
+					}
+					&:after {
+					    top: calc(50% + 14px);
+					    bottom: 0;
+					    /*margin-bottom: 0;*/
+					    /*margin-top: 0.25rem;*/
+					    /*margin-bottom: .35rem;*/
+					}
+					&:last-child {
+						margin-bottom: 0;
+						&:after {
+						/*	bottom: 0;
+							top: 50%;
+							margin-bottom: 0;*/
+						}
+					}
+					&+li {
+						padding: 50% 0;
+						/*margin-top: calc(-50% - .5vh);*/
+						&:before {
+							/*content: none;*/
+							/*display: none;*/
+							bottom: calc(50% + 4px);
+						}
+						&:after {
+							top: calc(50% + 4px);
+						}
+					}
+					&+li:last-child {
+						/*padding: 0 0 50%;*/
+						&:after {
+							/*margin-bottom: -.5rem;*/
+						}
+					}
+					&:only-child {
+						padding: 0;
+						&:after {
+						    top: calc(50% + 4px);
+						    bottom: 0;
+
+						}
+						&:before {
+							top: 0;
+							bottom: calc(50% + 4px);
+
+						}
+					}
+					a {
+						line-height: 11px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*this is a special fix because when ONLY the home page is open there is a tiny gap above the last dot*/
+[data-id=home] {
+	#dots {
+		& > li {
+			&:last-child {
+				transform: translateY(-2px);
+			}
+		}
+	}
+}
+
+[data-id=impact][data-open=true] {
+	#dots > li a {
+		color: #24261c;
+	}
+	.subdots li {
+		color: #24261c;
+		.subdot {
+			border-color: #24261c;
+		}
+	}
+	.subdot:hover, .dot:hover {
+		background: #24261c;
+	}
+	.dot {
+		border-color: #24261c;
+	}
+	.active .dot {
+		color: #24261c;
+		border-color: #24261c;
+		background: #24261c;
+	}
+}
+[data-open=true][data-cursub="0"] {
+	.active .subdots li:first-child .subdot {
+		background: #ECE5C9;
+	}
+}
+[data-open=true][data-cursub="1"] {
+	.active .subdots li:last-child .subdot {
+		background: #ECE5C9;
+	}
+}
+
+[data-currentsub="coalition_structure"][data-open=true],[data-currentsub="news_blog"][data-open=true] {
+	#dots>li.active .subdots li:after, #dots>li.active .subdots li:before {
+		background: #24261c !important;
+	}
+	#dots>li:before {
+		background: #24261c !important;	
+	}
+	#dots > li a {
+		color: #24261c !important;
+	}
+	.subdots li {
+		color: #24261c !important;
+		.subdot {
+			border-color: #24261c !important;
+		}
+	}
+	.subdot:hover, .dot:hover {
+		background: #24261c !important;
+	}
+	.dot {
+		border-color: #24261c !important;
+	}
+	.active .dot {
+		color: #24261c !important;
+		border-color: #24261c !important;
+		background: #24261c !important;
+	}
+}
+[data-currentsub="coalition_structure"][data-open=true] {
+	.active .subdots li .subdot[data-subdex="0"] {
+		background: #24261c !important;
+	}
+}
+[data-currentsub="news_blog"][data-open=true] {
+	.active .subdots li .subdot[data-subdex="1"] {
+		background: #24261c !important;
+	}
+}
+/*[data-id="coalition_who"][data-open=true] {
+	.active .subdots li:nth-child(2) .subdot {
+		background: #24261c;
+	}
+	#dots>li.active .subdots li:after, #dots>li.active .subdots li:before {
+		background: #24261c;
+	}
+	#dots>li:before {
+		background: #24261c;	
+	}
+}
+[data-id="coalition"][data-open=true][data-cursub="2"] {
+	.active .subdots li:nth-child(2) .subdot {
+		background: #ECE5C9;
+	}
+	#dots>li.active .subdots li:after, #dots>li.active .subdots li:before {
+		background: #ECE5C9;
+	}
+	#dots>li:before {
+		background: #ECE5C9;
+	}
+}*/

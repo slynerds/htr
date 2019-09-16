@@ -1,0 +1,4 @@
+[04-Jan-2019 11:10:36 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home6/haititak/public_html/dist/mailer/mailer.php on line 41
+[04-Jan-2019 11:11:09 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home6/haititak/public_html/dist/mailer/mailer.php on line 41
+[04-Jan-2019 11:16:19 America/Chicago] PHP Parse error:  syntax error, unexpected '50' (T_LNUMBER) in /home6/haititak/public_html/dist/mailer/mailer.php on line 36
+[04-Jan-2019 11:16:49 America/Chicago] PHP Parse error:  syntax error, unexpected '50' (T_LNUMBER) in /home6/haititak/public_html/dist/mailer/mailer.php on line 36

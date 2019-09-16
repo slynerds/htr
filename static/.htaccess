@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^([^.]+)\.([a-z]{2,4})$ [NC]
+RewriteRule ^ https://www.%1.%2%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 

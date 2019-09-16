@@ -1,0 +1,152 @@
+
+/* very large screens */
+@media(min-width: 1400px) {
+	.slide,#home,#impact,#contact,#activites_about {
+		h1 {
+			font-size: 76px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.8;
+		}
+	}
+	#mission_how {
+		h1 {
+			font-size: 46px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 1.6;
+		}
+		#copyblock {
+			p {
+				font-size: 18px;
+				line-height: 1.8;
+			}
+		}
+	}
+}
+
+/* mobile */
+
+@media(max-width:770px) {
+	#closeshade {
+		display: none;
+	}
+	#logo {
+/*		width: 100px;
+		top: 10px;*/
+		/*left: 20px;*/
+		width: 80px;
+		height: 78px;
+		top: 10px;
+/*		width: 60px;*/
+	}
+	#ex {
+		top: 15px;
+		/*right: 0;*/
+	}
+	nav {
+		display: none;
+	}
+	#dots {
+		/*height: 77vh;*/
+	}
+	#dot {
+		display: none;
+	}
+	.opener {
+		/*bottom: 60px;*/
+		/*bottom: 20px;*/
+		/*font-size: 30px;*/
+		bottom: 20px;
+		img {
+			/*width: 40px;*/
+		}	
+	}
+	.slide {
+		padding: 0 5vw;
+		h1 {
+			/*font-size: 56px;*/
+			/*font-size: 22px;*/
+			font-size: 22px;
+			/*font-size: 20px;*/
+			/*margin-bottom: 20px;*/
+			margin-bottom: 10px;
+			max-width: 100%;
+		} 
+		p {
+			font-size: 16px;
+			margin-bottom: 40px;
+			max-width: 100%;
+		}
+		* {
+			/*max-width: 100%;*/
+		}
+	}
+	#storyswitch div {
+		height: 40px;
+	}
+	#board, #team {
+		max-width: 410px;
+		height: 63% /*63vh*/;
+	}
+	#diff {
+		flex-direction: column;
+		transform: none;
+		bottom: 10vh;
+		h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+	}
+	#rightrow {
+		width: 50px;
+	}
+	#formcont {
+		padding-top: 0;
+		justify-content: flex-start;
+		#nomess {
+	/*		bottom: 5px;
+			right: 5px;
+			position: fixed;
+			top: auto;
+			right: auto;*/
+		}
+	}
+	#next, #back {
+		font-size: 12px;
+		img {
+			width: 20px;
+		}
+	}
+	#next {
+		left: 90px;
+	}
+	#mission_why {
+		padding: 0 10px;
+		.wrap {
+			width: 95%;
+			max-width: none;
+		}	
+	}
+	#copyblock {
+		z-index: 999;
+	}
+	h1 {
+		font-size: 32px;
+	}
+	#home {
+		h1 {
+			font-size: 32px;
+		}
+		p {
+			max-width: 80%;
+			font-size: 15px;
+		}
+	}
+	.scroller {
+		overflow-y: scroll;
+	}
+}
+

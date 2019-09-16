@@ -1,0 +1,36 @@
+{
+  "name": "htr",
+  "version": "1.0.0",
+  "description": "My astonishing Nuxt.js project",
+  "author": "TheDripper",
+  "private": true,
+  "scripts": {
+    "generate": "nuxt generate",
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "@bazzite/nuxt-optimized-images": "^0.2.1",
+    "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/bulma": "^1.2.3",
+    "express": "^4.15.3",
+    "form-serialize": "^0.7.2",
+    "imagesloaded": "^4.1.4",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.11",
+    "nuxt": "^2.6.1",
+    "sass-loader": "^7.1.0",
+    "url": "^0.11.0",
+    "url-parse": "^1.4.4",
+    "vue2-touch-events": "^1.1.2",
+    "whatwg-url": "^7.0.0",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "eslint": "^6.2.1",
+    "eslint-plugin-vue": "^5.2.3"
+  }
+}
